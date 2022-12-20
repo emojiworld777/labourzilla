@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Freelancer, Skill, Job
 
-# Register your models here.
+admin.site.register(Skill)
+admin.site.register(Freelancer)
+admin.site.register(Job)
