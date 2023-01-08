@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+    background-color:rgb(224, 224, 224);
+    width: 100vw;
+    height: 100%;
+    background: url("/media/Animated\ Shape.svg");
+    position: fixed;
+    
+}
+
+.log_form{
+    width: 40vh;
+    /* height: 60vh; */
+    padding-bottom: 70px;
+    margin-left: 40%;
+    margin-top: 3%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.wrapper .log_form h2{
+        font-size: 30px;
+        margin-left: 16%;
+        padding: 30px;
+}
+
+.wrapper .log_form h3{
+    font-size: 20px;
+    margin-left: 23%;
+    padding: 0 0 20px 15px ;
+}
+
+form input{
+    padding: 10px 12px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+form button{
+    padding: 10px 12px;
+    margin: 10px;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.wrapper .log_form span{
+    
+    margin-left: 50px;
+}
+
+.wrapper .log_form span a{
+    text-decoration: none;
+    color:darkblue;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+
+  
+  @media screen and (max-width: 1200px) {
+      
+      .log_form{
+          margin-left: 25%;
+          height: 600px;
+          margin-top: 20%;
+          border-radius: 15px;
+      }
+  
+      .wrapper .log_form h2{
+          font-size: 50px;
+          padding-top: 50px;;
+      }
+  
+      .wrapper .log_form h3{
+          font-size: 30px;
+          margin-left: 33%;
+      }
+  
+      form input{
+          padding: 15px 20px;
+          font-size: 20px;
+      }
+  
+      form button{
+          padding: 15px 20px;
+          font-size: 25px;
+          margin-bottom: 30px;
+      }
+  
+      .wrapper .log_form span{
+          font-size: 20px;
+          margin-left: 20%;
+      }
+  
+      .wrapper .log_form span a{
+          font-size: 20px;
+      }
+  
+  
+  }
+
+  @media screen and (max-width: 800px) {
+    .log_form {
+      width: 48vh;
+      height: 70vh;
+      margin-left: 8%;
+      margin-top: 20%;
+      
+    }
+  
+    form input{
+      width: 90%;
+      margin: 1px;
+      margin-bottom: 15px;
+    }
+  
+    form button{
+      width: 100%;
+      margin-left: 1px;
+    }
+
+    .wrapper .log_form h2 {
+        font-size: 40px;
+        margin-left: 10%;
+        margin-bottom: 0px;
+        padding: 30px;
+      }
+      .wrapper .log_form h3 {
+        font-size: 25px;
+        margin-left: 20%;   
+        padding: 0 0 20px 15px;
+      }
+      form input {
+        padding: 10px 12px;
+        margin: 10px;
+        border-radius: 3px;
+        font-size: 18px;
+        margin-left: 0px;
+      }
+      form button {
+        padding: 10px 12px;
+        margin: 10px;
+        font-size: 18px;
+        margin-left: 0%;
+        margin-bottom: 20px;
+      }
+      .wrapper .log_form span{
+        font-size: 15px;
+      }
+      .wrapper .log_form span a{
+        font-size: 15px;
+        margin-left: 0px;
+      };
+
+  }

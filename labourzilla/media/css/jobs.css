@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Topbar CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  /* font-family: "segoe ui"; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  box-shadow: 10px 10px 30px rgb(15, 15, 15, 0.13);
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-header > .nav-title a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: inline-start;
+  font-size: 18px;
+}
+
+.nav > .nav-links > .login {
+  padding: 5px 10px;
+  background-color: #3d32e3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-left: 55%;
+}
+.nav > .nav-links > .signUp {
+  padding: 5px 10px;
+  background-color: #8410ae;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.nav > .nav-links > .login > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > .signUp > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+@media (max-width: 1300px){
+  .nav > .nav-links > .login {
+    margin-left: 40px;
+  }
+  .nav > .nav-links > .post-project{
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index: 2;
+  }
+
+  .nav > .nav-links > .login {
+    margin: 10px;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(45vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+/* Jobs Navbar */
+
+.jobs-navbar {
+  
+  padding: 20px;
+  padding-top: 60px;
+  /* height: 120px; */
+  display: flex;
+  background-color: blue;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.jobs-navbar h1{
+  font-size: 40px;
+}
+.jobs-navbar button {
+  padding: 8px 13px;
+  background-color: #8410ae;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.jobs-navbar button:nth-child(2){
+    background-color: blue;
+    border-style: double;
+    padding: 6px 13px;
+    margin-left: 10px;
+}
+
+/* Jobs main section */
+
+.jobs-main{
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+    column-gap: 30px;
+    /* height: 100vh; */
+}
+.filter{
+    background-color: white;
+    padding: 20px;
+    width: 15%;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.filter h4{
+  padding: 10px 10px 20px 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.filter hr{
+  margin: 10px 0px ;
+  margin-bottom: 20px;
+}
+
+.filter span{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.filter h3{
+  font-size: 15px;
+  padding: 15px 0;
+}
+
+input[type=text]{
+  width: 25%;
+  padding: 5px 3px;
+  margin: 15px;
+}
+
+input[type=checkbox]{
+  width: 20px;
+  margin: 7px;
+}
+
+.jobs{
+    background-color: white;
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.jobs .search{
+  display: flex;
+  align-items: center;
+}
+.jobs .search img{
+  width: 25px;
+}
+.jobs .search input[type=text]{
+  padding: 8px 5px;
+  font-size: 15px;
+}
+.jobs .search button{
+  padding-left: 30%;
+  background-color: #3d32e3;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-left: 40px;  
+}
+.jobs hr{
+  width: 100%;
+  margin: 15px 0;
+}
+
+.job-post{
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.job-post:hover{
+  background-color: #eee;
+}
+
+.job-post-content{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding-left: 10px;
+}
+
+.job-post-content-top{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.job-post-content-top a img{
+  width: 25px;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.job-post-content-top a{
+  text-decoration: none;
+  color: green;
+}
+
+.job-post-content-middle{
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.job-post-content-bottom{
+  display: flex;
+  column-gap: 10px;
+  color:#2617f4;
+  font-size: 18px;
+}
+
+.job-post-price{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.job-post-price button{
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px ;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#job-post-line{
+  width: 95%;
+  margin-left: 15px;
+}
+
+@media  (max-width:1300px) {
+  .jobs-main{
+    justify-content: start;
+  }
+  .filter{
+    width: 30%;
+  }
+  .jobs{
+    width: 70%;
+  }
+  .job-post{
+    column-gap: 30px;
+  }
+  .job-post-price{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  
+  .jobs-navbar{
+    flex-direction: column;
+  }
+  .jobs-navbar h1{
+    padding: 20px;
+  }
+  .filter{
+    display: none;
+  }
+  .jobs{
+    width: 90%;
+    margin-left: 20px;
+  }
+  .job-post{
+    flex-direction: column;
+    align-items: start;
+  }
+  .job-post-content-top{
+    column-gap: 40px;
+  }
+  
+}

@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+    {% block style %}
+    <link rel="stylesheet" href="/media/css/postProject.css" />
+    {% endblock style %}
+    {% block title %}Post Project{% endblock title %}
+  {% block content %}
+    <section class="main-container">
+      <div class="wrapper"> 
+        <div class="heading">
+          <h3>Labourzilla</h3>
+          <h2>Tell us what you need done?</h2>
+          <p>
+            Contact skilled workers within minutes. View profiles, ratings,
+            portfolios and chat with them. <br> Pay the workers only when you are
+            100% satisfied with their work.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="project-form">
+          <h2>Choose a name for your project</h2>
+          <input type="text" placeholder="eg. House renovation" id="name"/>
+          <h2>Tell us more about your project</h2>
+          <br />
+          <textarea
+            rows="6"
+            cols="80"
+            placeholder="Describe your project here..." id="desc"
+          ></textarea>
+          <div class="upload">
+            <input type="file" id="file" name="filename" />
+            <p>
+              Drag and drop any image or documents taht might be helpful in
+              explaining your brief here <br />
+              (Max file size:24MB)
+            </p>
+          </div>
+
+          <button class="next">Next</button>
+        </div>
+        <!-- <img src="/media/imgs/work.jpg" class="work-img" alt=""> -->
+        
+      </div>
+    </section>
+  {% endblock content %}

@@ -1,0 +1,25 @@
+<div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        Labourzilla 
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="{% url 'howitworks' %}" >How it works</a>
+      <a href="{% url 'jobList' %}" target="_blank">Browse Jobs</a>
+      <button class="login"><a href="{% url 'login' %}" target="_blank">Login</a></button>
+      <button class="signUp"><a href="{% url 'signup' %}" target="_blank">SignUp</a></button>
+      <button class="post-project"><a href="{% url 'postproject' %}">Post Project</a></button>
+      
+    </div>
+    
+  </div>

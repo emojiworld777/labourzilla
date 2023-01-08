@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/* Topbar CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  box-shadow: 10px 10px 30px rgb(15, 15, 15, 0.13);
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+.nav > .nav-header > .nav-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: inline-start;
+  font-size: 18px;
+}
+
+.nav > .nav-links > .login {
+  padding: 5px 10px;
+  background-color: #3d32e3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  margin-left: 40%;
+}
+.nav > .nav-links > .signUp {
+  padding: 5px 10px;
+  background-color: #8410ae;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 17px;
+}
+
+.nav > .nav-links > .post-project {
+  padding: 5px 10px;
+  background-color: #e75480;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 17px;
+  color: white;
+  margin-left: 100px;
+}
+
+.nav > .nav-links > .login > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > .signUp > a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+@media (max-width: 1300px) {
+  .nav > .nav-links > .login {
+    margin-left: 40px;
+  }
+  .nav > .nav-links > .post-project {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+
+}
+
+/* Navbar CSS */
+
+.container1 {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 10px 10px 30px rgb(15, 15, 15, 0.13); */
+  /* position: fixed; */
+  justify-content: space-around;
+
+  background-color: rgb(2, 11, 24);
+  color: white;
+}
+
+.findJobs,
+.HireFreelancers,
+.about,
+.resources {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 780px) {
+}
+
+/* Idea section */
+
+.content {
+  background: url("/media/imgs/Bg2.svg");
+  width: 99.1vw;
+  height: 70vh;
+  background-size: cover;
+  margin-top: 15px;
+}
+.content .hero-text {
+  font-size: 41px;
+  color: white;
+  padding-top: 100px;
+  margin: 0px 60% 0 200px;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+.content p {
+  color: whitesmoke;
+  font-size: 25px;
+  margin: 20px 60% 0 200px;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+.content button {
+  margin-left: 200px;
+  margin-top: 14px;
+  padding: 8px 13px;
+  background-color: #8410ae;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
+.work-line {
+  margin-left: 17%;
+  margin-right: 17%;
+}
+.labour {
+  margin: 20px 10% 40px 10%;
+}
+.labour h1 {
+  margin: 10px 0px 10px 200px;
+  font-size: 40px;
+}
+
+.labour .work {
+  display: flex;
+  margin-top: 30px;
+}
+.labour .work img {
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 200px;
+}
+.labour .work .process {
+  margin: 10px 10% 10px 100px;
+}
+.labour .work .process h2 {
+  font-size: 30px;
+  font-family: "Roboto";
+  margin: 15px;
+}
+.labour .work .process ul {
+  margin: 20px;
+  list-style: decimal;
+}
+.labour .work .process ul li {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.labour .work .process ul p {
+  font-size: 17px;
+  margin: 10px 0;
+}
+.labour .work .process button {
+  margin: 10px 0 0 20px;
+  padding: 8px 13px;
+  background-color: #3d32e3;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
+hr {
+  margin: 10px 10%;
+}
+.contact {
+  display: flex;
+  margin: 0 10%;
+}
+.contact .left {
+  margin: 30px 100px 0px 10%;
+}
+.contact .left h2 {
+  margin: 0px 0px 10px 0px;
+  font-size: 30px;
+}
+.contact .left p {
+  margin-bottom: 20px;
+}
+.contact .left h3 {
+  margin-bottom: 10px;
+}
+
+.contact .right img {
+  width: 600px;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+}
+.safe-text {
+  margin-left: 50%;
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+hr {
+  margin-top: 40px;
+}
+.safe-line {
+  margin-left: 17%;
+  margin-right: 17%;
+}
+.safe {
+  display: flex;
+}
+.safe img {
+  margin-left: 22%;
+  border-radius: 10px;
+}
+
+.safe .right p {
+  margin: 10px 20% 20px 10%;
+}
+.safe .right .pay-support {
+  display: flex;
+  margin: 20px 10% 10px 10%;
+}
+.safe .right .pay-support .pay {
+  width: 90%;
+}
+.safe .right .pay-support p {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 1300px) {
+  .nav .nav-links button {
+    display: inline-block;
+  }
+  .content .hero-text {
+    margin: 15px 30% 0 80px;
+    font-size: 50px;
+  }
+  .content p {
+    margin: 20px 35% 0 80px;
+    font-size: 38px;
+  }
+  .content button {
+    margin: 30px 0 0 80px;
+    font-size: 30px;
+  }
+  .labour .work img {
+    height: 500px;
+    margin-left: 10px;
+  }
+  .contact .right img {
+    width: 450px;
+  }
+  .labour .work .process {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .contact{
+    flex-direction:column-reverse;
+  }
+  .safe{
+    flex-direction: column;
+  }
+  .safe-text{
+    margin-left: 30%;
+  }
+  .safe img{
+    width: 500px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    z-index: 2;
+  }
+
+  .nav > .nav-links > .login {
+    margin: 10px;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(45vh - 50px);
+    overflow-y: auto;
+  }
+  .container {
+    width: 100%;
+  }
+  .findJobs,
+  .HireFreelancers,
+  .about,
+  .resources {
+    font-size: 12px;
+  }
+  .contact .right img {
+    width: 100px;
+  }
+  .content {
+    width: 100vw;
+  }
+  .content .hero-text {
+    margin: 10px 20% 0 20px;
+    font-size: 30px;
+  }
+  .content p {
+    margin: 20px 10% 0 20px;
+    font-size: 20px;
+  }
+  .content button {
+    margin: 20px 20px 0px 20px;
+    font-size: 20px;
+  }
+
+  .labour {
+    margin: 20px 3% 10px 3%;
+  }
+  .labour .work {
+    flex-direction: column;
+  }
+  .labour h1 {
+    margin-left: 20px;
+  }
+
+  .labour .work img {
+    width: 150px;
+    height: 200px;
+    margin-left: 10px;
+  }
+  .labour .work .process {
+    margin-left: 10px;
+  }
+  .contact {
+    flex-direction: column-reverse;
+  }
+  .contact .right img {
+    width: 300px;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .contact .left h2 {
+    width: 180px;
+  }
+  .contact .left p {
+    width: 250px;
+  }
+  .safe-text {
+    margin-left: 15%;
+  }
+  .safe {
+    flex-direction: column;
+  }
+
+  .safe-line {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .work-line {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .safe img {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .safe .right .pay-support {
+    flex-direction: column;
+  }
+}

@@ -1,5 +1,5 @@
 """
-WSGI config for blogapp project.
+WSGI config for labourzilla project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

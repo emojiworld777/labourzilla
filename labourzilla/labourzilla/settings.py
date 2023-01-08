@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tp@wey22r&gc&(m(xdk)oyxndm$m=o!9u5vt=)n&*ya2zm^kn2'
+SECRET_KEY = 'django-insecure-x-^jw$-f*^+stu!k3(m4$p1a5#%6&&l8m%p4u(a#l%6ur=4&)s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -62,7 +62,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'base'
             ],
         },
     },
@@ -123,5 +122,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = str(BASE_DIR)+'/media'
+MEDIA_ROOT = str(BASE_DIR) + '/media'
 MEDIA_URL = '/media/'

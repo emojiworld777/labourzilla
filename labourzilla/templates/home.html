@@ -1,4 +1,162 @@
 {% extends 'main.html' %}
+{% block title %}Home{% endblock title %}
+{% block style %}<link rel="stylesheet" href="media/css/main.css">{% endblock style %}
 {% block content %}
-<h1>This is user home page</h1>
+<div class="Wrapper">
+    <div class="mainContainer">
+      <video src="media/video.mp4" autoPlay loop muted id="myVideo" ></video>
+      <img src="/media/imgs/main-bg-img.jpg" alt="" class="bg-image">
+      <div class="bgText">
+        <div class="bgTextHead">
+          Hire the best labour for your dream work, online
+        </div>
+        <br />
+        <ul class="bgTextList">
+          <li>World's largest labour marketplace</li>
+          <li>Any work you can possibly think of</li>
+          <li>Save up to 90% & get quotes for free</li>
+          <li>Pay only when you're 100% happy</li>
+        </ul>
+        <br />
+        <div class="bgButtons">
+          <button class="mainHire"><a href="{% url 'postproject' %}" target="_blank">Hire Labour</a></button>
+          <button class="earnMoney"><a href="{% url 'jobList' %}" target="_blank">Earn money</a></button>
+        </div>
+      </div>
+    </div>
+    <div class="mainContainer2">
+      <div class="mainContainerLine">
+        <hr />
+      </div>
+      <div class="mainDiv1">
+        <div class="mainDiv1Heading">Need something done?</div>
+        <div class="div1Articles">
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.1.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Post a Job</div>
+            </div>
+            <div class="div1ArticleText">
+              It’s free and easy to post a job. Simply fill in a title,
+              description and budget and competitive bids come within minutes.
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.2.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Choose work</div>
+            </div>
+            <div class="div1ArticleText">
+              No job is too big or too small. We've got freelancers for jobs
+              of any size or budget, across 1800+ skills. No job is too
+              complex. We can get it done!
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.7.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Pay Safely</div>
+            </div>
+            <div class="div1ArticleText">
+              Only pay for work when it has been completed and you're 100%
+              satisfied with the quality using our milestone payment system.
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.4.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">We are here to help</div>
+            </div>
+            <div class="div1ArticleText">
+              Our talented team of recruiters can help you find the best
+              freelancer for the job and our technical co-pilots can even
+              manage the project for you.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainContainerLine">
+        <hr />
+      </div>
+      <div class="mainDiv1">
+        <div class="mainDiv1Heading">What's great about it?</div>
+        <div class="div1Articles">
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.2.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Browse portfolios</div>
+            </div>
+            <div class="div1ArticleText">
+              Find professionals you can trust by browsing their samples of
+              previous work and reading their profile reviews.
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.3.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Fast bids</div>
+            </div>
+            <div class="div1ArticleText">
+              No job is too big or too small. We've got freelancers for jobs
+              of any size or budget, across 1800+ skills. No job is too
+              complex. We can get it done!
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.5.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Quality Work</div>
+            </div>
+            <div class="div1ArticleText">
+              Freelancer.com has by far the largest pool of quality
+              freelancers globally- over 50 million to choose from.
+            </div>
+          </div>
+          <div class="div1Article">
+            <div class="div1ArticleHeadWrapper">
+              <img
+                src="media/mainArticleImg/1.6.jpeg"
+                alt=""
+                class="div1ArticleImg"
+              />
+              <div class="div1ArticleHead">Track Progress</div>
+            </div>
+            <div class="div1ArticleText">
+              Keep up-to-date and on-the-go with our time tracker, and mobile
+              app. Always know what freelancers are up to.
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 {% endblock content %}

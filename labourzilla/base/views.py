@@ -3,14 +3,17 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 
-def browse_job(request):
-    return render(request, 'browse_job.html')
-
-def login(request):
+def user_login(request):
     return render(request, 'login.html')
 
-def singup(request):
-    return render(request, 'signup.html')
+def user_signup(request):
+    return render(request, 'signUp.html')
 
-def post_job(request):
-    return render(request, 'post_job.html')
+def job_list(request):
+    return render(request, 'jobs.html')
+
+def howitworks(request):
+    return render(request,'howItWorks.html')
+
+def postproject(request):
+    return render(request, 'postProject.html')
