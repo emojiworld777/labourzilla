@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+{% block style %}
+<link rel="stylesheet" href="/media/css/main.css">
+<link rel="stylesheet" href="/media/css/signUp.css">
+{% endblock style %}
+{% block title %}SignUp{% endblock title %}
+{% block content %}
+    <div class="wrapper">
+        <div class="log_form">
+            <h2>Labourzilla</h2>
+            <h3>Sign Up</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name='username' placeholder="Username">
+                <input type="password" name='password' placeholder="Password">
+                <input type="password" name='password2' placeholder="Confirm Password">
+                <button type='submit'>Join Labourzilla</button>
+            </form>
+            <span>Already have an account? <a href="{% url 'login' %}">Login</a></span>
+        </div>
+    </div>
+{% endblock content %}
+{% block customScript %}
+{% if alert %}
+<script type='text/javascript'>
+    var message = {{alert}}
+    alert(message)
+</script>
+{% endif %}
+{% endblock customScript %}

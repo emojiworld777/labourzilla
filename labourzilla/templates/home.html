@@ -160,3 +160,9 @@
     </div>
   </div>
 {% endblock content %}
+{% block customScript %}
+<script>
+    var message = request.session['alert']
+    alert(message)
+</script>
+{% endblock customScript%}
