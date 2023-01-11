@@ -1,0 +1,5 @@
+1. add category in post projects
+2. create account page
+3. create after bid page
+4. create selection page
+--swakshwar

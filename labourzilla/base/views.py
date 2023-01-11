@@ -64,4 +64,11 @@ def howitworks(request):
     return render(request,'howItWorks.html')
 
 def postproject(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        describe = request.POST['describe']
+        support_file = request.FILES['file']
+        min_price = request.POST['min_price']
+        max_price = request.POST['max_price']
+        #Category not available
     return render(request, 'postProject.html')
