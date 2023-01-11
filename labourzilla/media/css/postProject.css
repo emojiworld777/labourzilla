@@ -84,6 +84,11 @@ body {
   color: white;
 }
 
+.nav > .nav-links > .post-project > a {
+  text-decoration: none;
+  color: white;
+}
+
 .nav > .nav-links > a {
   display: inline-block;
   padding: 13px 10px 13px 10px;
@@ -242,6 +247,24 @@ body {
 .upload p{
   padding: 10px;
   width: 600px;
+}
+
+.budget{
+  padding: 30px 0px;
+}
+
+.budget h2{
+  padding: 20px 0px;  
+}
+
+.budget input{
+  font-size: 15px;
+  padding: 5px 10px;
+  width: 200px;
+}
+
+.min-budget{
+  margin-right: 30px;
 }
 
 .next{
