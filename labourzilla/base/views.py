@@ -28,6 +28,26 @@ def public_signup(request):
 
     return render(request, 'public_signUp.html', context)
 
+def worker_signup(request):
+    context = {}
+    if request.method=='POST':
+        username=request.POST['username']
+        password=request.POST['password']
+        password2=request.POST['password2']
+        if password == password2:
+            user = User.objects.create_user(username=username, password=password)
+            public = Worker(user=user, name='Unknown', mobile=9674717240, email='swakshwar@gmail.com')
+            public.save()
+            request.session['alert'] = 'User added successfully'
+            return redirect('home')
+        else:
+            context['alert'] = 'Password and Password confirmation not matched'
+            print(context)
+            print(request.session)
+            return render(request, 'worker_signup.html', context)
+
+    return render(request, 'worker_signup.html', context)
+
 def job_list(request):
     return render(request, 'jobs.html')
 

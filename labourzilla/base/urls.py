@@ -4,7 +4,8 @@ urlpatterns = [
     path('', home, name='home'),
     path('login/', user_login, name='login'),
     path('jobs/', job_list, name='jobList'),
-    path('signup/', public_signup, name='signup'),
+    path('publicsignup/', public_signup, name='pubsignup'),
     path('howitworks/', howitworks, name='howitworks'),
-    path('post/', postproject, name='postproject')
+    path('post/', postproject, name='postproject'),
+    path('workersignup/', worker_signup, name='worksignup')
 ]
