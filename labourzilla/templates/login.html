@@ -1,15 +1,19 @@
 {% extends "main.html" %}
-{% block style %}<link rel="stylesheet" href="/media/css/login.css"/>{% endblock style %}
+{% block style %}
+<link rel="stylesheet" href="/media/css/login.css"/>
+<link rel="stylesheet" href="/media/css/main.css"/>
+{% endblock style %}
 {% block title %}Login{% endblock title %}
 {% block content %}
     <div class="wrapper">
         <div class="log_form">
             <h2>Labourzilla</h2>
             <h3>Welcome Back</h3>
-            <form action="">
-                <input type="text" placeholder="Email or Username">
-                <input type="password" placeholder="Password">
-                <button>LogIn</button>
+            <form method='POST'>
+                {% csrf_token %}
+                <input name='username' type="text" placeholder="Email or Username">
+                <input name='password' type="password" placeholder="Password">
+                <button type='submit'>LogIn</button>
             </form>
             <span>Don't have an account? <a href="signUp.html">SignUp</a></span>
         </div>
