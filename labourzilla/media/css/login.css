@@ -18,10 +18,11 @@
     /* height: 60vh; */
     padding-bottom: 70px;
     margin-left: 40%;
-    margin-top: 3%;
+    margin-top: 9%;
     background-color: white;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .wrapper .log_form h2{
@@ -57,7 +58,7 @@ form button{
 
 .wrapper .log_form span{
     
-    margin-left: 50px;
+    margin-left: 70px;
 }
 
 .wrapper .log_form span a{

@@ -2,7 +2,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
       <div class="nav-title">
-        Labourzilla 
+        <a href="{% url 'home' %}">Labourzilla</a>
       </div>
     </div>
     <div class="nav-btn">
@@ -20,7 +20,13 @@
       <button class="signUp"><a href="{% url 'pubsignup' %}" target="_blank">Public SignUp</a></button>
       <button class="signUp"><a href="{% url 'worksignup' %}" target="_blank">Worker SignUp</a></button>
       <button class="post-project"><a href="{% url 'postproject' %}">Post Project</a></button>
-      
+      <div class="dropdown">
+        <button><img src="/media/imgs/down-arrow.png" alt=""></button>
+        <div class="dropdown-options">
+          <a href="#">Account</a>
+          <a href="#">Projects</a>
+        </div>
+      </div>
     </div>
     
   </div>

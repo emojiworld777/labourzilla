@@ -20,6 +20,7 @@
   margin-top: 3%;
   background-color: white;
   border-radius: 10px;
+  margin-top: 6%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -56,7 +57,7 @@ form button {
 
 .wrapper .log_form span {
   font-size: 13px;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .wrapper .log_form span a {
