@@ -18,7 +18,8 @@
         </div>
       </div>
       <div class="container">
-        <div class="project-form">
+        <form method="POST"  class="project-form" enctype="multipart/form-data">
+            {% csrf_token %}
           <h2>Choose a name for your project</h2>
           <input name ='title' type="text" placeholder="eg. House renovation" id="name"/>
           <h2>Tell us more about your project</h2>
@@ -29,7 +30,7 @@
             placeholder="Describe your project here..." id="desc"
           ></textarea>
           <div class="upload">
-            <input name='file' type="file" id="file" name="filename" />
+            <input type="file"  name="file" />
             <p>
               Drag and drop any image or documents taht might be helpful in
               explaining your brief here <br />
@@ -49,7 +50,7 @@
             <option value="small work" class="drop-options">House small work</option>
           </select>
           <button type='submit' class="next">Submit</button>
-        </div>
+        </form>
         <!-- <img src="/media/imgs/work.jpg" class="work-img" alt=""> -->
         
       </div>

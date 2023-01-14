@@ -62,12 +62,15 @@ def user_logout(request):
     return redirect('home')
 
 def job_list(request):
-    return render(request, 'jobs.html')
+    all_jobs = Jobs.objects.all()
+    context = {'all_jobs': all_jobs}
+    return render(request, 'jobs.html', context)
 
 def howitworks(request):
     return render(request,'howItWorks.html')
 
 def postproject(request):
+    curr_user = request.user
     if request.method == 'POST':
         title = request.POST['title']
         describe = request.POST['describe']
@@ -75,7 +78,7 @@ def postproject(request):
         min_price = request.POST['min_price']
         max_price = request.POST['max_price']
         category = request.POST['category']
-        job_instance = Jobs(title=title, description=describe, support_file=support_file, min_price=min_price,max_price=max_price, category=category)
+        job_instance = Jobs(user=curr_user, title=title, description=describe, support_file=support_file, min_price=min_price,max_price=max_price, category=category)
         job_instance.save()
         return redirect('home')
     return render(request, 'postProject.html')
@@ -83,8 +86,10 @@ def postproject(request):
 def update_account(request):
     curr_user = request.user
     context={}
-    pub_get = Public.objects.get(user = curr_user)
-    work_get = Worker.objects.get(user = curr_user)
+    try:
+        pub_get = Public.objects.get(user = curr_user)
+    except:
+        work_get = Worker.objects.get(user = curr_user)
     if pub_get == None:
         context['acc'] = work_get
         instance=work_get
@@ -101,7 +106,7 @@ def update_account(request):
         instance.email = email
         instance.save()
         return redirect('home')
-    return render(request, 'account.html', context)
+    return render(request, 'accounts.html', context)
 
 
 def bid(request, id):
@@ -109,7 +114,10 @@ def bid(request, id):
     curr_user = request.user
     job = Jobs.objects.get(id=id)
     context['job'] = job
-    worker = Worker.objects.get(user = curr_user)
+    try:
+        worker = Worker.objects.get(user = curr_user)
+    except:
+        worker = None
     if worker is None:
         return HttpResponse('<h1>Looks like you dont have a worker id, you cant bid sorry</h1>')
     
@@ -126,3 +134,10 @@ def projectlist(request):
     context = {}
     context['jobs'] = jobs
     return render(request, 'projectlist.html', context)
+
+def bidlist(request, id):
+    context = {}
+    job = Jobs.objects.get(id=id)
+    all_bids = Bid.objects.filter(job = job)
+    context['bids'] = all_bids
+    return render(request, 'bidlist.html', context)

@@ -20,6 +20,7 @@ class Public(models.Model):
         return self.name
 
 class Jobs(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField(max_length=500)
     support_file = models.FileField(upload_to='uploads')

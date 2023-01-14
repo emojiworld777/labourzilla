@@ -8,8 +8,8 @@
     <div class="jobs-navbar">
       <h1>Top jobs</h1>
       <div class="buutons">
-        <button><a href="{% url 'postpojects' %}">I want to hire</a></button>
-        <button><a href="{% url 'joblist' %}">I want to work</a></button>
+        <button><a href="#">I want to hire</a></button>
+        <button><a href="#">I want to work</a></button>
       </div>
     </div>
     <div class="jobs-main">
@@ -70,7 +70,7 @@
           </div>
           <div class="job-post-price">
             <span>₹{{job.min_price}}-{{job.max_price}} INR</span>
-            <button><a href='{% url "bid" {{job.id}} %}'>Bid Now</a></button>
+            <button><a href='{% url "bid" job.id %}'>Bid Now</a></button>
           </div>
         </div>
         <hr id="job-post-line">

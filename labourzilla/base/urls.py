@@ -10,5 +10,6 @@ urlpatterns = [
     path('workersignup/', worker_signup, name='worksignup'),
     path('account/', update_account, name='account'),
     path('jobs/<id>', bid, name='bid'),
-    # path('projects/',)
+    path('projects/',projectlist, name='projects'),
+    path('projects/<id>', bidlist, name='bidlist')
 ]

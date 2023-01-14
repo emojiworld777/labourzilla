@@ -3,7 +3,6 @@
 {% block style %}{% endblock style %}
 {% block content %}
 {% for project in all_projects %}
-    <h1>{{project.worker.name}}</h1>
-    <p>{{project.amout}}</p>
+    <h1>{{project.title}}</h1>
 {% endfor %}
 {% endblock content %}
