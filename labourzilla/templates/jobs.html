@@ -8,8 +8,8 @@
     <div class="jobs-navbar">
       <h1>Top jobs</h1>
       <div class="buutons">
-        <button>I want to hire</button>
-        <button>I want to work</button>
+        <button><a href="{% url 'postpojects' %}">I want to hire</a></button>
+        <button><a href="{% url 'joblist' %}">I want to work</a></button>
       </div>
     </div>
     <div class="jobs-main">
@@ -51,73 +51,30 @@
           <button>Search</button>
         </div>
         <hr />
+        {% for job in all_jobs %}
         <div class="job-post">
           <div class="job-post-content">
             <div class="job-post-content-top">
-              <h4>Extract web content</h4>
-              <span>6 days left</span>
-              <a href="{% url 'jobList' %}">
+              <h4>{{job.title}}</h4>
+              <a href="">
                 <div class="link">
                   <img src="/media/imgs/check.png" alt="" />
                   Verified
                 </div>
               </a>
             </div>
-            <div class="job-post-content-middle">
-              I want to extract content available on site by python code files.
-              It takes an input from excel that get pasted on site textbox after
-              that a search button clicks then the view profile button get
-              clicked. On the profile page of that site all dynamic visible
-              contents extract and store in an excel file with a separate column
-              name.
-            </div>
+            <div class="job-post-content-middle">{{job.description}}</div>
             <div class="job-post-content-bottom">
-              <h5>PhP</h5>
-              <h5>Python</h5>
-              <h5>Web Scraping</h5>
+              <h5>{{job.category}}</h5>
             </div>
           </div>
           <div class="job-post-price">
-            <span>₹1500-12500 INR</span>
-            <span>10 bids</span>
-            <button>Bid Now</button>
+            <span>₹{{job.min_price}}-{{job.max_price}} INR</span>
+            <button><a href='{% url "bid" {{job.id}} %}'>Bid Now</a></button>
           </div>
         </div>
         <hr id="job-post-line">
-        <div class="job-post">
-          <div class="job-post-content">
-            <div class="job-post-content-top">
-              <h4>Extract web content</h4>
-              <span>6 days left</span>
-              <a href="/jobs.html">
-                <div class="link">
-                  <img src="/media/imgs/check.png" alt="" />
-                  Verified
-                </div>
-              </a>
-            </div>
-            <div class="job-post-content-middle">
-              I want to extract content available on site by python code files.
-              It takes an input from excel that get pasted on site textbox after
-              that a search button clicks then the view profile button get
-              clicked. On the profile page of that site all dynamic visible
-              contents extract and store in an excel file with a separate column
-              name.
-            </div>
-            <div class="job-post-content-bottom">
-              <h5>PhP</h5>
-              <h5>Python</h5>
-              <h5>Web Scraping</h5>
-            </div>
-          </div>
-          <div class="job-post-price">
-            <span>₹1500-12500 INR</span>
-            <span>10 bids</span>
-            <button>Bid Now</button>
-          </div>
-        </div>
-        
-        
+        {% endfor %}
       </div>
     </div>
 {% endblock content %}

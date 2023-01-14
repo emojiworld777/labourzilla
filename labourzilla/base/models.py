@@ -19,7 +19,6 @@ class Public(models.Model):
     def __str__(self):
         return self.name
 
-
 class Jobs(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField(max_length=500)
@@ -30,4 +29,11 @@ class Jobs(models.Model):
 
     def __str__(self):
         return self.title
+
+class Bid(models.Model):
+    worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
+    job = models.ForeignKey(Jobs, on_delete=models.CASCADE)
+    amount = models.PositiveIntegerField()
+    def __str__(self):
+        return self.job.title
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Public, Worker, Jobs
+from .models import Public, Worker, Jobs, Bid
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 
@@ -57,6 +57,10 @@ def worker_signup(request):
 
     return render(request, 'worker_signup.html', context)
 
+def user_logout(request):
+    logout(request)
+    return redirect('home')
+
 def job_list(request):
     return render(request, 'jobs.html')
 
@@ -70,5 +74,55 @@ def postproject(request):
         support_file = request.FILES['file']
         min_price = request.POST['min_price']
         max_price = request.POST['max_price']
-        #Category not available
+        category = request.POST['category']
+        job_instance = Jobs(title=title, description=describe, support_file=support_file, min_price=min_price,max_price=max_price, category=category)
+        job_instance.save()
+        return redirect('home')
     return render(request, 'postProject.html')
+
+def update_account(request):
+    curr_user = request.user
+    context={}
+    pub_get = Public.objects.get(user = curr_user)
+    work_get = Worker.objects.get(user = curr_user)
+    if pub_get == None:
+        context['acc'] = work_get
+        instance=work_get
+    else:
+        context['acc'] = pub_get
+        instance = pub_get
+    
+    if request.method == 'POST':
+        name = request.POST['name']
+        number = request.POST['number']
+        email = request.POST['email']
+        instance.name = name
+        instance.mobile = number
+        instance.email = email
+        instance.save()
+        return redirect('home')
+    return render(request, 'account.html', context)
+
+
+def bid(request, id):
+    context = {}
+    curr_user = request.user
+    job = Jobs.objects.get(id=id)
+    context['job'] = job
+    worker = Worker.objects.get(user = curr_user)
+    if worker is None:
+        return HttpResponse('<h1>Looks like you dont have a worker id, you cant bid sorry</h1>')
+    
+    if request.method=='POST':
+        amount = request.POST['amount']
+        bid_instance = Bid(worker= worker, job=job, amount=amount)
+        bid_instance.save()
+        return redirect('home')
+    return render(request, 'bidder.html', context)
+
+def projectlist(request):
+    curr_user = request.user
+    jobs = Jobs.objects.filter(user=curr_user)
+    context = {}
+    context['jobs'] = jobs
+    return render(request, 'projectlist.html', context)

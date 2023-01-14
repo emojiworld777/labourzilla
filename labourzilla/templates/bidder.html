@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block title %}Bid{% endblock title %}
+{% block style %}{% endblock style %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <label>Enter your bid</label>
+    <input name='amount' type='number' value='{{job.min_price}}' />
+    <button type='submit'>Submit</button>
+</form>
+{% endblock content %}

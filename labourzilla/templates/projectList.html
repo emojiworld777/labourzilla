@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% block title %}Project List{% endblock title %}
+{% block style %}{% endblock style %}
+{% block content %}
+{% for project in all_projects %}
+    <h1>{{project.worker.name}}</h1>
+    <p>{{project.amout}}</p>
+{% endfor %}
+{% endblock content %}

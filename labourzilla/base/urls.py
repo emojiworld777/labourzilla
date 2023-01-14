@@ -7,5 +7,8 @@ urlpatterns = [
     path('publicsignup/', public_signup, name='pubsignup'),
     path('howitworks/', howitworks, name='howitworks'),
     path('post/', postproject, name='postproject'),
-    path('workersignup/', worker_signup, name='worksignup')
+    path('workersignup/', worker_signup, name='worksignup'),
+    path('account/', update_account, name='account'),
+    path('jobs/<id>', bid, name='bid'),
+    # path('projects/',)
 ]
