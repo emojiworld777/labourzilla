@@ -3,6 +3,6 @@
 {% block style %}{% endblock style %}
 {% block content %}
 {% for project in all_projects %}
-    <h1>{{project.title}}</h1>
+    <h1><a href="{% url 'bidlist' project.id %}" >{{project.title}}</a></h1>
 {% endfor %}
 {% endblock content %}

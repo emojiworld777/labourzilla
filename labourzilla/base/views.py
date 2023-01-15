@@ -132,12 +132,12 @@ def projectlist(request):
     curr_user = request.user
     jobs = Jobs.objects.filter(user=curr_user)
     context = {}
-    context['jobs'] = jobs
-    return render(request, 'projectlist.html', context)
+    context['all_projects'] = jobs
+    return render(request, 'projectList.html', context)
 
 def bidlist(request, id):
     context = {}
     job = Jobs.objects.get(id=id)
     all_bids = Bid.objects.filter(job = job)
-    context['bids'] = all_bids
+    context['all_bids'] = all_bids
     return render(request, 'bidlist.html', context)
