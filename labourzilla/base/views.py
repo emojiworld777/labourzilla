@@ -92,6 +92,7 @@ def postproject(request):
 def update_account(request):
     curr_user = request.user
     context={}
+    pub_get, work_get = None, None
     try:
         pub_get = Public.objects.get(user = curr_user)
     except:

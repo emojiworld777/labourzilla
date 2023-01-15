@@ -70,7 +70,7 @@
           </div>
           <div class="job-post-price">
             <span>₹{{job.min_price}}-{{job.max_price}} INR</span>
-            <button><a href='{% url "bid" job.id %}'>Bid Now</a></button>
+            <a href='{% url "bid" job.id %}'><button>Bid Now</button></a>
           </div>
         </div>
         <hr id="job-post-line">
