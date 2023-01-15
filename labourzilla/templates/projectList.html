@@ -1,19 +1,31 @@
 {% extends 'main.html' %}
-{% block title %}Project List{% endblock title %}
+{% block title %}Project List{% endblock title %} 
 {% block style %}
-<link rel="stylesheet" href="/media/css/main.css">
-<link rel="stylesheet" href="/media/css/projectList.css">
-{% endblock style %}
-{% block content %}
+<link rel="stylesheet" href="/media/css/main.css" />
+<link rel="stylesheet" href="/media/css/projectList.css" />
+{% endblock style %} 
+{% block content %} 
 {% if all_projects|length == 0 %}
 <h1 class="Nothing">Sorry you have no projects. First add some projects.</h1>
 {% endif %}
-<div class="all-projects">
-{% for project in all_projects %}
-    <h1><a href="{% url 'bidlist' project.id %}" >{{project.title}}</a></h1>
-    <p>{{project.description}}</p>
-    <p>INR {{project.min_price}} - {{project.max_price}}</p>
-    <strong>click on title to check bids</strong>
-{% endfor %}
+<div class="projects-imgs"> 
+  <div class="all-projects">
+    {% for project in all_projects %}
+    <div class="single-project">
+        <h1><a href="{% url 'bidlist' project.id %}">{{project.title}}</a></h1>
+        <p>{{project.description}}</p>
+        <p>INR {{project.min_price}} - {{project.max_price}}</p>
+        <strong>click on title to check bids</strong>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="random-images">
+    <img src="/media/imgs/4775.jpg" alt="" >
+    <img src="/media/imgs/5236.jpg" alt="" >
+    
+  </div>
 </div>
 {% endblock content %}
+
+
+

@@ -2,6 +2,70 @@
     padding-top: 100px;
 }
 
+.projects-imgs{
+    width: auto;
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    row-gap: 30px;
+}
+
 .all-projects{
-    padding-top: 100px; 
+    width: 40%;
+    margin-left: 50px;
+}
+
+.single-project{
+    padding: 20px;
+    background-color: aliceblue;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.single-project h1 a{
+    color: rgb(0, 0, 100);
+    text-decoration: none;
+}
+
+.single-project p{
+    padding: 20px 0px;
+}
+
+.random-images{
+    display: flex;
+    flex-direction: column;
+}
+
+.random-images img{
+    width: 600px;
+    height: 400px;
+}
+
+@media (max-width:900px){
+    .projects-imgs{
+        flex-direction: column;
+    }
+    .all-projects{
+        width: 80%;
+    }
+    .random-images img{
+        width: 402px;
+        height: 268px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-imgs{
+        flex-direction: column;
+    }
+    .all-projects{
+        width: 90%;
+        margin-left: 10px;
+    }
+    .random-images img{
+        width: 300px;
+        height: 200px;
+        margin-left: 30px;
+    }
 }
