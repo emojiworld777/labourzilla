@@ -235,12 +235,22 @@ button:hover{
   font-weight: 600;
   cursor: pointer;
 }
+
+.jobs-navbar button:hover{
+  background-color: rgb(147, 147, 147);
+}
+
+.jobs-navbar button a{
+  text-decoration: none;
+  color: white;
+}
 .jobs-navbar button:nth-child(2){
     background-color: blue;
     border-style: double;
     padding: 6px 13px;
     margin-left: 10px;
 }
+
 
 /* Jobs main section */
 
@@ -250,7 +260,7 @@ button:hover{
     align-items:flex-start;
     justify-content:center;
     column-gap: 30px;
-    /* height: 100vh; */
+    height: 85vh;
 }
 .filter{
     background-color: white;
@@ -394,6 +404,16 @@ input[type=checkbox]{
   padding: 5px ;
   font-size: 15px;
   cursor: pointer;
+}
+
+.job-post-price button a{
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.job-post-price button:hover{
+  background-color: rgb(0, 147, 0);
 }
 
 #job-post-line{

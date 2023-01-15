@@ -1,15 +1,21 @@
-{% extends 'main.html' %}
-{% block title %}Account{% endblock title %}
-{% block style %}{% endblock style %}
+
+{% extends "main.html" %}
+{% block style %}
+<link rel="stylesheet" href="/media/css/accounts.css" />
+<link rel="stylesheet" href="/media/css/main.css" />
+{% endblock style %}
+{% block title %}Accounts{% endblock title %}
 {% block content %}
-<form method='POST'>
+<section class="accounts">
+  <form method="POST">
     {% csrf_token %}
     <label>Edit name:</label>
-    <input name='name' type='text' value='{{acc.name}}'/>
+    <input name="name" type="text" value="{{acc.name}}" />
     <label>Edit number:</label>
-    <input name='number' type="number" value="{{acc.mobile}}"/>
+    <input name="number" type="number" value="{{acc.mobile}}" />
     <label>Edit Email:</label>
-    <input name='email' type="email" value="{{acc.email}}"/>
+    <input name="email" type="email" value="{{acc.email}}" />
     <button type="submit">Edit</button>
-</form>
+  </form>
+</section>
 {% endblock content %}

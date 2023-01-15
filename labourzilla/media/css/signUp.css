@@ -10,13 +10,15 @@
   height: 100%;
   position: fixed;
   background: url("/media/Animated\ Shape2.svg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .log_form {
   width: 40vh;
   /* height: 60vh; */
   padding-bottom: 70px;
-  margin-left: 40%;
   margin-top: 3%;
   background-color: white;
   border-radius: 10px;
@@ -69,6 +71,14 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 10%;
+}
+
+.warning{
+  width: 55%;
+  align-items: center;
+  color: white;
+  padding: 30px;
+  font-size: 15px;
 }
 
 

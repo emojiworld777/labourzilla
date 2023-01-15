@@ -7,9 +7,9 @@
 {% block content %}
     <div class="jobs-navbar">
       <h1>Top jobs</h1>
-      <div class="buutons">
-        <button><a href="#">I want to hire</a></button>
-        <button><a href="#">I want to work</a></button>
+      <div class="jobs-navbar-btns">
+        <button class="jobs-navbar-btn"><a href="#">I want to hire</a></button>
+        <button class="jobs-navbar-btn"><a href="#">I want to work</a></button>
       </div>
     </div>
     <div class="jobs-main">
@@ -65,7 +65,7 @@
             </div>
             <div class="job-post-content-middle">{{job.description}}</div>
             <div class="job-post-content-bottom">
-              <h5>{{job.category}}</h5>
+              <h5>#{{job.category}}</h5>
             </div>
           </div>
           <div class="job-post-price">

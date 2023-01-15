@@ -11,13 +11,19 @@
             <h3>Sign Up</h3>
             <form method="POST">
                 {% csrf_token %}
-                <input type="text" name='username' placeholder="Username">
+                <input type="text" name="name" placeholder="Enter your name">
+                <input type="text" name='username' placeholder="Enter your Username">
+                <input type="email" name="email" placeholder="Enter Email Id">
+                <input type="number" name="mobile" placeholder="Enter mobile number">
                 <input type="password" name='password' placeholder="Password">
                 <input type="password" name='password2' placeholder="Confirm Password">
                 <button type='submit'>Join Labourzilla</button>
             </form>
             <span>Already have an account? <a href="{% url 'login' %}">Login</a></span>
         </div>
+        <div class="warning">
+            <h2>Note that username and name are not same. You need to use username while login</h2> 
+         </div>
     </div>
 {% endblock content %}
 {% block customScript %}
