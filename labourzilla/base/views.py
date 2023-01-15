@@ -27,7 +27,8 @@ def public_signup(request):
         email = request.POST['email']
         mobile = request.POST['mobile']
         if password == password2:
-            user = User.objects.create_user(username=username, password=password)
+            user = User.objects.create(username=username, password=password)
+            user.save()
             public = Public(user=user, name=name, mobile=mobile, email=email)
             public.save()
             request.session['alert'] = 'User added successfully'
@@ -50,8 +51,9 @@ def worker_signup(request):
         mobile = request.POST['mobile']
         email = request.POST['email']
         if password == password2:
-            user = User.objects.create_user(username=username, password=password)
-            public = Worker(user=user, name=name, mobile=name, email=email)
+            user = User.objects.create(username=username, password=password)
+            user.save()
+            public = Worker(user=user, name=name, mobile=mobile, email=email)
             public.save()
             request.session['alert'] = 'User added successfully'
             return redirect('home')

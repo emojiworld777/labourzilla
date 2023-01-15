@@ -1,6 +1,9 @@
 {% extends "main.html" %}
 {% block title %}List of bids{% endblock title %}
-{% block content %}
+{% block style %}
+<link rel="stylesheet" href="/media/css/main.css" />
+{% endblock style %} 
+{% block content %} 
     {% for bid in all_bids %}
     <h3>{{bid.amount}} rupees bidded by {{bid.worker.name}}</h3>
     {% endfor %}
